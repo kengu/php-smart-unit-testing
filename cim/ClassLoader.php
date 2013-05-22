@@ -30,7 +30,7 @@
 		 * 
 		 * @since 31. May 2012, v. 6.50
 		 */
-		public function __construct($root=_CFG_PATH_API)
+		public function __construct($root=_CFG_PATH)
 		{
 			// Forward
 			parent::__construct('cim', $root);
