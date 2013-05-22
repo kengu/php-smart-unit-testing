@@ -3,4 +3,7 @@ php-smart-unit-tests
 
 Tutorial on smart unit testing with object oriented programming.
 
-* **Step 1 (branch)**: namespace and SPL auto-loading
+Steps (branches)
+
+* Step 1: namespace and SPL auto-loading
+* Step 2: PHPUnit and bootstrapping SPL auto-loading
