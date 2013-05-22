@@ -7,3 +7,4 @@ Steps (branches)
 
 * Step 1: namespace and SPL auto-loading
 * Step 2: PHPUnit and bootstrapping SPL auto-loading
+* Step 3: OO-principles interface, inheritence, abstraction, implementation
