@@ -3,4 +3,4 @@ php-smart-unit-tests
 
 Tutorial on smart unit testing with object oriented programming.
 
-* Step 4: Smart use of abstract unit tests
+* Step 5: ... will break unit tests if API is changed

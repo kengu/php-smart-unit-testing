@@ -26,4 +26,11 @@
          */
         public function getRegNumber();
         
+        /**
+         * Get car color
+         * @since 22. May 2013, v. 7.60
+         * @return integer Number of passanger
+         */
+        public function getColor();
+        
     }// Car
