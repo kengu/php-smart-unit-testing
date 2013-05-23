@@ -81,7 +81,7 @@
         public function testGetPassangerCapacity()
         {
             // Assert implementation
-            $this->assertEquals($this->capacity, $this->resource->getPassangerCapacity());
+            $this->assertEquals($this->capacity, $this->resource->getPassengerCapacity());
             
         }// testGetPassangerCapacity
         

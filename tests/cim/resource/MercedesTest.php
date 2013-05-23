@@ -13,7 +13,7 @@
     namespace cim\resource;
     
     /**
-     * AudiTest class
+     * MercedesTest class
      * 
 	 * @copyright Copyright 2013 {@link http://www.onevoice.no One Voice AS} 
 	 *
@@ -21,12 +21,12 @@
 	 * 
 	 * @author Kenneth Gulbrandsøy <kenneth@onevoice.no>
      */
-    class AudiTest extends AbstractCarTest
+    class MercedesTest extends AbstractCarTest
     {
         const CAPACITY = 5;
         const NUMBER = "AB12345";
         const COLOR = "red";
-        const MTM = true;
+        const AMG = true;
         
         /**
          * Constructor
@@ -36,35 +36,35 @@
          */
         public function __construct()
         {            
-            // Implement test of Audi class
+            // Implement test of Mercedes class
             parent::__construct
             (
                 // Car implementation class
-                '\cim\resource\Audi', 
+                '\cim\resource\Mercedes', 
                 // Expected car values
-                Audi::NAME, self::CAPACITY, self::NUMBER, self::COLOR,
+                Mercedes::NAME, self::CAPACITY, self::NUMBER, self::COLOR,
                 // Implementated car values
-                self::CAPACITY, self::NUMBER, self::COLOR, self::MTM
+                self::CAPACITY, self::NUMBER, self::COLOR, self::AMG
             );
             
         }// __construct
         
                 
         /**
-         * Test Audi::isMTM()
+         * Test Mercedes::isAMG()
          * 
          * @since 22. May 2013, v. 7.60
          * 
-         * @covers \cim\resource\Audi->isMTM
+         * @covers \cim\resource\Mercedes->isAMG
          * 
          * @return void
          */
-        public function testIsMTM()
+        public function testIsAMG()
         {
             // Assert implementation
-            $this->assertEquals(self::MTM, $this->resource->isMTM());
+            $this->assertEquals(self::AMG, $this->resource->isAMG());
             
-        }// testIsMTM
+        }// testIsAMG
         
         
-    }// AudiTest
+    }// MercedesTest
