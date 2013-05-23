@@ -70,20 +70,20 @@
         
         
         /**
-         * Test Vehicle::getPassangerCapacity()
+         * Test Vehicle::getPassengerCapacity()
          * 
          * @since 22. May 2013, v. 7.60
          * 
-         * @covers \cim\resource\Vehicle->getPassangerCapacity
+         * @covers \cim\resource\Vehicle->getPassengerCapacity
          * 
          * @return void
          */
-        public function testGetPassangerCapacity()
+        public function testGetPessangerCapacity()
         {
             // Assert implementation
             $this->assertEquals($this->capacity, $this->resource->getPassengerCapacity());
             
-        }// testGetPassangerCapacity
+        }// testGetPassengerCapacity
         
         
     }// AbstractVehicleTest

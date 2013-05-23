@@ -42,14 +42,14 @@
         
         
         /**
-         * Get passanger capacity
+         * Get passenger capacity
          * @since 22. May 2013, v. 7.60
          * @return string Resource Name
          */
         public function getPassengerCapacity()
         {
             return $this->capacity;
-        }// getPassangerCapacity
+        }// getPassengerCapacity
 
 
     }// AbstractVehicle
