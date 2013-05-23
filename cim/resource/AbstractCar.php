@@ -19,8 +19,6 @@
      */
     abstract class AbstractCar extends AbstractVehicle implements Car
     {
-        const NAME = "Car";
-        
         /**
          * Car registration number
          * @var string
@@ -30,15 +28,17 @@
         /**
          * Constructor
          *
-         * @since 22. May 2013, v. 7.60
-         * 
+         * @param string $name Resource name
+         * @param integer $capacity Passanger capacity
          * @param string $number Registration number
          *
+         * @since 22. May 2013, v. 7.60
          */
-        public function __construct($number)
+        public function __construct($name, $capacity, $number)
         {
-            parent::__construct(self::NAME);
+            parent::__construct($name, $capacity);
             $this->number= $number;
+            
         }// __construct
         
         
@@ -49,7 +49,7 @@
          */
         public function getRegNumber()
         {
-            return $this->name;
+            return $this->number;
         }// getRegNumber
 
 
