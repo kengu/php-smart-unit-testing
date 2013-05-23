@@ -25,19 +25,29 @@
          */
         protected $number;
         
+        
+        /**
+         * Car color name
+         * @var string
+         */
+        protected $color;
+        
+        
         /**
          * Constructor
          *
          * @param string $name Resource name
          * @param integer $capacity Passanger capacity
          * @param string $number Registration number
+         * @param string $color Color name
          *
          * @since 22. May 2013, v. 7.60
          */
-        public function __construct($name, $capacity, $number)
+        public function __construct($name, $capacity, $number, $color)
         {
             parent::__construct($name, $capacity);
             $this->number= $number;
+            $this->color= $color;
             
         }// __construct
         
@@ -51,6 +61,17 @@
         {
             return $this->number;
         }// getRegNumber
+        
+        
+        /**
+         * Get car color
+         * @since 22. May 2013, v. 7.60
+         * @return string Color name
+         */
+        public function getColor()
+        {
+            return $this->color;
+        }// getColor
 
 
     }// AbstractCar
