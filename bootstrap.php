@@ -15,9 +15,14 @@
 	define('_CIM_CLASS_LOADER','ClassLoader');
 	define('_SPL_CLASS_LOADER','SplClassLoader');
     
-    // Load class loader
+    // Load dependencies
 	require(implode(DIRECTORY_SEPARATOR,array(__DIR__,_SPL_CLASS_LOADER.'.php')));
 	require(implode(DIRECTORY_SEPARATOR,array(__DIR__,'cim',_CIM_CLASS_LOADER.'.php')));
+    
+    // Load test dependencies
+	require(implode(DIRECTORY_SEPARATOR,array(__DIR__,'tests','cim','resource','AbstractResourceTest.php')));
+	require(implode(DIRECTORY_SEPARATOR,array(__DIR__,'tests','cim','resource','AbstractVehicleTest.php')));
+	require(implode(DIRECTORY_SEPARATOR,array(__DIR__,'tests','cim','resource','AbstractCarTest.php')));
     
 	// Create CIM API class loader instance
 	$_SESSION[_CIM_CLASS_LOADER] = new cim\ClassLoader();

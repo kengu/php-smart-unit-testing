@@ -19,8 +19,6 @@
      */
     abstract class AbstractVehicle extends AbstractResource implements Vehicle
     {
-        const NAME = "Vehicle";
-        
         /**
          * Vehicle passanger capacity
          * @var integer
@@ -30,14 +28,15 @@
         /**
          * Constructor
          *
+         * @param string $name Name
          * @param integer $capacity Passanger capacity
          *
          * @since 22. May 2013, v. 7.60
          * 
          */
-        public function __construct($capacity)
+        public function __construct($name, $capacity)
         {
-            parent::__construct(self::NAME);
+            parent::__construct($name);
             $this->capacity = $capacity;
         }// __construct
         
