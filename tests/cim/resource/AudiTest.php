@@ -25,6 +25,7 @@
     {
         const CAPACITY = 5;
         const NUMBER = "AB12345";
+        const COLOR = "red";
         const MTM = true;
         
         /**
@@ -41,9 +42,9 @@
                 // Car implementation class
                 '\cim\resource\Audi', 
                 // Expected car values
-                Audi::NAME, self::CAPACITY, self::NUMBER, 
+                Audi::NAME, self::CAPACITY, self::NUMBER, self::COLOR,
                 // Implementated car values
-                self::CAPACITY, self::NUMBER, self::MTM
+                self::CAPACITY, self::NUMBER, self::COLOR, self::MTM
             );
             
         }// __construct

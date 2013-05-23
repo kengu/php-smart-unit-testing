@@ -32,13 +32,14 @@
          * Constructor
          * @param integer $capacity Passanger capacity
          * @param string $number Registration number
-         * @param boolean Tuned by Motoren Technik Mayer flag
+         * @param boolean $mtm Tuned by Motoren Technik Mayer flag
+         * @param string $color Color name
          *
          * @since 22. May 2013, v. 7.60
          */
-        public function __construct($capacity, $number, $mtm)
+        public function __construct($capacity, $number, $color, $mtm)
         {
-            parent::__construct(self::NAME, $capacity, $number);
+            parent::__construct(self::NAME, $capacity, $number, $color);
             $this->mtm = $mtm;
         }// _construct
         

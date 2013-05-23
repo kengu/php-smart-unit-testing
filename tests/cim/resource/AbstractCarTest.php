@@ -22,13 +22,19 @@
 	 * @author Kenneth Gulbrandsøy <kenneth@onevoice.no>
      */
     abstract class AbstractCarTest extends AbstractVehicleTest
-    {
-        
+    {        
         /**
          * Car registration number
-         * @var integer 
+         * @var string
          */
         protected $number;
+        
+        
+        /**
+         * Car color name
+         * @var string 
+         */
+        protected $color;
         
         
         /**
@@ -36,6 +42,9 @@
          * 
          * @param string $type Fully qualified class name
          * @param string $name Resource name
+         * @param integer $capacity Vehicle passenger number
+         * @param string $number Car registration number
+         * @param string $color Car color name
          * @param mixed $args Accepts a variable number of arguments 
          * which are passed to the resource implementatino class constructor, 
          * much like call_user_func.
@@ -43,12 +52,13 @@
          * @since 22. May 2013, v. 7.60
          * 
          */
-        public function __construct($type, $name, $capacity, $number, $args=null)
+        public function __construct($type, $name, $capacity, $number, $color, $args=null)
         {            
             // Forward
-            parent::__construct($type, $name, $capacity, self::stripArgs(4, func_get_args()));
+            parent::__construct($type, $name, $capacity, self::stripArgs(5, func_get_args()));
             
             // Expected Car values
+            $this->color = $color;
             $this->number = $number;
             
         }// __construct
@@ -84,6 +94,23 @@
             $this->assertEquals($this->number, $this->resource->getRegNumber());
             
         }// testGetRegNumber
+        
+        
+        /**
+         * Test Car::getColor()
+         * 
+         * @since 22. May 2013, v. 7.60
+         * 
+         * @covers \cim\resource\Car->getColor
+         * 
+         * @return void
+         */
+        public function testGetColor()
+        {
+            // Assert implementation
+            $this->assertEquals($this->color, $this->resource->getColor());
+            
+        }// testGetColor
         
         
     }// AbstractCarTest
