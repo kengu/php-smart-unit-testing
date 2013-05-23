@@ -28,10 +28,10 @@
         /**
          * Constructor
          *
-         * @since 22. May 2013, v. 7.60
-         * 
          * @param string $name Name
          *
+         * @since 22. May 2013, v. 7.60
+         * 
          */
         public function __construct($name)
         {

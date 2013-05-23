@@ -22,14 +22,36 @@
         const NAME = "Audi";
         
         /**
-         * Get resource name
-         * @since 22. May 2013, v. 7.60
-         * @return string Resource Name
+         * Tuned by Motoren Technik Mayer flag
+         * @var boolean
          */
-        public function getName()
+        private $mtm;
+
+
+        /**
+         * Constructor
+         * @param integer $capacity Passanger capacity
+         * @param string $number Registration number
+         * @param boolean Tuned by Motoren Technik Mayer flag
+         *
+         * @since 22. May 2013, v. 7.60
+         */
+        public function __construct($capacity, $number, $mtm)
         {
-            return self::NAME;
-        }// getName
+            parent::__construct(self::NAME, $capacity, $number);
+            $this->mtm = $mtm;
+        }// _construct
+        
+        
+        /**
+         * Check if tuned by Motoren Technik Mayer.
+         * @since 22. May 2013, v. 7.60
+         * @return boolean
+         */
+        public function isMTM()
+        {
+            return $this->mtm;
+        }// isMTM
 
-
+        
     }// Audi
